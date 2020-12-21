@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63 lab</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let some_string = 'предложение на русском языке';
+        let shifr = '';
+        let k = 5;
+
+        for (let index = 0; index < some_string.length; index++) {
+            some_string[index] !== ' ' ? shifr += String.fromCharCode(some_string[index].charCodeAt(0) + k) : false;       
+        }  
+        console.log('Незашифрованная строка: ', some_string);
+        console.log('Зашифрованная строка: ', shifr);
+
+    </script>
+</body>
+</html>

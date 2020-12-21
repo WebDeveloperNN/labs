@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32</title>
+</head>
+<body>
+    
+
+    <script>
+        let N = 5;
+        let first, second, third;
+        let some_array = new Array;
+        let answer = 0;
+
+        for (let index = 0; index < N; index++) {
+            some_array[index] = Math.round(Math.random() * 100);                    
+        }
+
+    
+        first = some_array[0];
+        second = some_array[1];
+        third = some_array[2];
+
+        if (first < second && first < third) {
+            console.log('result: ', first) 
+        }
+
+        if (second < first && second < third) {
+            console.log('result: ', second) 
+        }
+
+        if (third < first && third < second) {
+            console.log('result: ', third) 
+        }
+
+
+
+
+        console.log('Array: ', some_array);
+
+    </script>
+</body>
+</html>

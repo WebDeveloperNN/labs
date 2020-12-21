@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68</title>
+</head>
+<body>
+
+    <script>
+
+        let N = 5;
+        let some_array = new Array;
+        
+
+        for (let index = 0; index < N; index++) {
+            some_array[index] = Math.round(Math.random() * 100);            
+        }
+
+        let min = some_array[0], max = some_array[N-1];
+
+        for (let index = 0; index < N; index++) {
+            if (min > some_array[index]) {                
+                min = some_array[index];
+            }      
+
+            if (max < some_array[index])   {
+                max = some_array[index];
+            }            
+        }
+        console.log('Array:', some_array);
+        console.log('Min:', min);
+        console.log('Max:', max);
+        let min_index, max_index;
+
+        for (let index = 0; index < N; index++) {
+            
+            if (some_array[index] === min) {
+                min_index = index;
+            }
+            if (some_array[index] === max) {
+                max_index = index;
+            } 
+
+            if (index + 1 === N) {
+                some_array[min_index] = max;
+                some_array[max_index] = min;
+            }
+        }
+
+        console.log('New array:', some_array);
+
+    </script>
+    
+</body>
+</html>
